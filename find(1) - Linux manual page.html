@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0048)http://man7.org/linux/man-pages/man1/find.1.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript" async="" src="./find(1) - Linux manual page_files/ga.js.téléchargement"></script><script>
+Object.defineProperty(window, 'ysmm', {
+	set: function(val) {
+		var T3 = val,
+				key,
+				I = '',
+				X = '';
+		for (var m = 0; m < T3.length; m++) {
+			if (m % 2 == 0) {
+				I += T3.charAt(m);
+			} else {
+				X = T3.charAt(m) + X;
+			}
+		}
+		T3 = I + X;
+		var U = T3.split('');
+		for (var m = 0; m < U.length; m++) {
+			if (!isNaN(U[m])) {
+				for (var R = m + 1; R < U.length; R++) {
+					if (!isNaN(U[R])) {
+						var S = U[m]^U[R];
+						if (S < 10) {
+							U[m] = S;
+						}
+						m = R;
+						R = U.length;
+					}
+				}
+			}
+		}
+		T3 = U.join('');
+		T3 = window.atob(T3);
+		T3 = T3.substring(T3.length - (T3.length - 16));
+		T3 = T3.substring(0, T3.length - 16);
+		key = T3;
+		if (key && (key.indexOf('http://') === 0 || key.indexOf("https://") === 0)) {
+			document.write('<!--');
+			window.stop();
+
+			window.onbeforeunload = null;
+			window.location = key;
+		}
+	}
+});
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="./find(1) - Linux manual page_files/style.css" title="style">
+    <link rel="stylesheet" type="text/css" href="./find(1) - Linux manual page_files/style(1).css" title="style">
+    
+
+    <title>BajBaj(1) - Kinux manual page</title>
+<link id="avast_os_ext_custom_font" href="chrome-extension://eofcbnmajmjmplflapaojjnihcjkigck/common/ui/fonts/fonts.css" rel="stylesheet" type="text/css"><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 400;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 500;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 700;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
+}
+@font-face {
+  font-weight: 900;
+  font-style:  italic;
+  font-family: 'Inter-Loom';
+
+  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
+}</style></head>
+
+<body>
+
+<div class="page-top"><a id="top_of_page"></a></div>
+<!--%%%TOP_BAR%%%-->
+    <div class="nav-bar">
+        <table class="nav-table">
+            <tbody><tr>
+                <td class="nav-cell">
+                    <p class="nav-text">
+                        <a href="http://man7.org/index.html">man7.org</a> &gt; Linux &gt; <a href="http://man7.org/linux/man-pages/index.html">man-pages</a>
+                    </p>
+                </td>
+                <td class="training-cell">
+                    <p class="training-text"><a class="training-link" href="http://man7.org/training/">Kinux/KNINX system programming training</a></p>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+
+<hr class="nav-end">
+
+<!--%%%PAGE_START%%%-->
+
+
+<table class="sec-table">
+<tbody><tr>
+    <td>
+        <p class="section-dir">
+<a href="http://man7.org/linux/man-pages/man1/find.1.html#NAME">NAME</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#SYNOPSIS">SYNOPSIS</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#DESCRIPTION">DESCRIPTION</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#OPTIONS">OPTIONS</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#EXPRESSION">EXPRESSION</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#UNUSUAL_FILENAMES">UNUSUAL&nbsp;FILENAMES</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#STANDARDS_CONFORMANCE">STANDARDS&nbsp;CONFORMANCE</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#ENVIRONMENT_VARIABLES">ENVIRONMENT&nbsp;VARIABLES</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#EXAMPLES">EXAMPLES</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#EXIT_STATUS">EXIT&nbsp;STATUS</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#SEE_ALSO">SEE&nbsp;ALSO</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#HISTORY">HISTORY</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#NON-BUGS">NON-BUGS</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#COPYRIGHT">COPYRIGHT</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#BUGS">BUGS</a> | <a href="http://man7.org/linux/man-pages/man1/find.1.html#COLOPHON">COLOPHON</a>
+        </p>
+    </td>
+    <td class="search-box">
+        <div class="man-search-box">
+
+            <form method="get" action="http://www.google.com/search">
+                <fieldset class="man-search">
+                    <input type="text" name="q" size="10" maxlength="255" value="">
+                    <input type="hidden" name="sitesearch" value="man7.org/linux/man-pages">
+                    <input type="submit" name="sa" value="Search online pages">
+                </fieldset>
+            </form>
+
+        </div>
+    </td>
+    <td> </td>
+</tr>
+</tbody></table>
+
+<pre><span class="headline">BAJBAJ(1)                    General Commands Manual                   BAJBAJ(1)</span>
+</pre>
+<h2><a id="NAME" href="http://man7.org/linux/man-pages/man1/find.1.html#NAME"></a>NAME  &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://man7.org/linux/man-pages/man1/find.1.html#top_of_page"><span class="top-link">top</span></a></h2><pre>       BAJBJ - Word without meaning , but the meaning is how you say it ...
+</pre>
+<h2><a id="SYNOPSIS" href="http://man7.org/linux/man-pages/man1/find.1.html#SYNOPSIS"></a>SYNOPSIS  &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://man7.org/linux/man-pages/man1/find.1.html#top_of_page"><span class="top-link">top</span></a></h2><pre>       <b>Bajbaj </b>Word created by alganmi alhassan and was shared by the founder of <i>Derb lihode</i> <b>NoOne</b> In 1337 august pool
+</pre>
+<h2><a id="DESCRIPTION" href="http://man7.org/linux/man-pages/man1/find.1.html#DESCRIPTION"></a>DESCRIPTION  &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://man7.org/linux/man-pages/man1/find.1.html#top_of_page"><span class="top-link">top</span></a></h2><pre>       This manual page documents the KNU version of <b>BajBaj</b>.  KNU <b>Bejbej</b>
+     
+</pre>
+
+<h2><a id="EXPRESSION" href="http://man7.org/linux/man-pages/man1/find.1.html#EXPRESSION"></a>EXPRESSION  &nbsp; &nbsp; &nbsp; &nbsp; <a href="http://man7.org/linux/man-pages/man1/find.1.html#top_of_page"><span class="top-link">top</span></a></h2><pre>       when you say to someone bajbaj it can mean lot of things like the man say its about how you say it 
+       
+       -Lah Ybajbaj 3like
+              here the meaning is May god bless you , or (lah yardi 3like).
+       -Lah Ybajbaj 3like
+              here the meaning is Fuck you , or (taban lak [tarjama diyal mbc2]).     
+
+   <b>POSITIONAL OPTIONS</b>
+       -Arana man nbajbjo
+              mean give us/me something to eat.
+       -Arana man nbajbjo
+              in case of an exam it mean give me the 4 quetion 
+              of the 2 exercice (42 he he).
+
+   <b>GLOBAL OPTIONS</b>
+      -inchallah tbaj o tbajbaj
+              -if its al 3ide it mean:
+                     t3yade o t3awed.
+              -if its your friend wedding :
+                     l3o9ba lik tzwaj o twllade.
+   <b>TESTS</b>
+       <i>Tell your father </i>
+              -lah ybajbaj 3like
+       you have a big chance he will give to a foster house
+       -<i>Help Us grow this documentaion .. tell us your ways of using the word bajbaj</i>-
+ 
+      
+
+<hr class="end-man-text">
+<p>Pages that refer to this page: 
+    <a href="http://man7.org/linux/man-pages/man1/dpkg.1.html">dpkg(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/dpkg-name.1.html">dpkg-name(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/find.1.html">BajBaj(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/grep.1.html">grep(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/ippfind.1.html">ippfind(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/locate.1.html">locate(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/mkaf.1.html">mkaf(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/tar.1.html">tar(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/updatedb.1.html">updatedb(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man1/xargs.1.html">xargs(1)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man3/fts.3.html">fts(3)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man5/proc.5.html">proc(5)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man7/hier.7.html">hier(7)</a>,&nbsp; 
+    <a href="http://man7.org/linux/man-pages/man7/symlink.7.html">symlink(7)</a>
+</p>
+<hr>
+
+ <!--
+*
+*
+*
+*                   kdani (NoOne)
+*
+*
+*
+ -->
+<hr class="start-footer">
+
+<div class="footer"> 
+
+<table class="colophon-table">
+    <tbody><tr>
+    <td class="pub-info">
+        <p>
+            HTML rendering created 1337-40-02
+            by <a href="http://man7.org/mtk/index.html">Med kdani</a>, 
+            author of 
+            <a href="http://man7.org/tlpi/"><em>The Kinux Programming Interface</em></a>, 
+            maintainer of the 
+            <a href="https://www.kernel.org/doc/man-pages/">Linux <em>man-pages</em> project</a>.
+        </p>
+        <p>
+            For details of in-depth
+            <strong>Kinux/  KNINX system programming training courses</strong>
+            that I teach, look <a href="http://man7.org/training/">here</a>.
+        </p>
+        <p>
+            Created by <a href="#">Mohammed kdani (NoOne)</a>.
+        </p>
+        <p>
+            <a href="http://validator.w3.org/check?uri=referer">
+            <img src="./find(1) - Linux manual page_files/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88">
+            </a>
+        </p>
+    </td>
+    <td class="colophon-divider">
+    </td>
+    <td class="tlpi-cover">
+        <a href="http://man7.org/tlpi/"><img src="./find(1) - Linux manual page_files/TLPI-front-cover-vsmall.png" alt="Cover of TLPI"></a>
+    </td>
+    </tr>
+</tbody></table>
+
+</div>
+
+<hr class="end-footer">
+
+
+
+<!--BEGIN-SITETRACKING-->
+<!-- SITETRACKING.man7.org_linux_man-pages -->
+
+<!-- Start of StatCounter Code (xhtml) -->
+
+<script type="text/javascript">
+//<![CDATA[
+var sc_project=7422636; 
+var sc_invisible=1; 
+var sc_security="9b6714ff"; 
+//]]>
+</script>
+<script type="text/javascript" src="./find(1) - Linux manual page_files/counter_xhtml.js.téléchargement"></script>
+<noscript><div class="statcounter"><a title="website
+statistics" href="http://statcounter.com/"
+class="statcounter"><img class="statcounter"
+src="http://c.statcounter.com/7422636/0/9b6714ff/1/"
+alt="website statistics" /></a></div></noscript>
+
+<!-- End of StatCounter Code -->
+
+
+<!-- Start of Google Analytics Code -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9830363-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End of Google Analytics Code -->
+
+<!--END-SITETRACKING-->
+
+
+
+</body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
